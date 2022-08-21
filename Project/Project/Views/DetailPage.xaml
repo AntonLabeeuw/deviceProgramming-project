@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project.Views.DetailPage"
+              NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout Background="White">
+            <ScrollView>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="300"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid>
+                        <Image x:Name="imgBreed" Aspect="AspectFill" MinimumHeightRequest="100" Source="https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg" />
+                    </Grid>
+
+                    <Label x:Name="lblBreedName" Text="" TextColor="Black" Grid.Row="1" FontAttributes="Bold" FontSize="Large" Margin="30,0,0,0" />
+
+                    <Label x:Name="lblBreedTemperament" TextColor="Black" Text="" Margin="30, 0, 0, -30" Grid.Row="2" FontSize="Medium" />
+
+                    <Label x:Name="lblBreedLifespan" TextColor="Black" Text="" Margin="30, 40, 0, 0" Grid.Row="3" FontSize="Medium" />
+                    <Label x:Name="lblBreedDescription" TextColor="Black" Text="" Margin="30, 70, 0, 0" Grid.Row="3" FontSize="Medium" />
+                    <Label x:Name="lblBreedAffectionlevel" TextColor="Black" Text="" Margin="30, 20, 0, 0" Grid.Row="4" FontSize="Medium" />
+                    <Label x:Name="lblBreedChildFriendly" TextColor="Black" Text="" Margin="30, 50, 0, 0" Grid.Row="4" FontSize="Medium" />
+                    <Label x:Name="lblBreedDogFriendly" TextColor="Black" Text="" Margin="30, 80, 0, 0" Grid.Row="4" FontSize="Medium" />
+                    <Label x:Name="lblBreedEnergyLevel" TextColor="Black" Text="" Margin="30, 110, 0, 0" Grid.Row="4" FontSize="Medium" />
+                    <Label x:Name="lblBreedIntelligence" TextColor="Black" Text="" Margin="30, 140, 0, 0" Grid.Row="4" FontSize="Medium" />
+                    <Label x:Name="lblBreedStrangerFriendly" TextColor="Black" Text="" Margin="30, 170, 0, 0" Grid.Row="4" FontSize="Medium" />
+
+                    <Button x:Name="btnGoBack" Text="Go back" Grid.Row="5" Clicked="btnUpdateBrewery_Clicked" BackgroundColor="#ab965e" />
+                </Grid>
+            </ScrollView>
+        </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

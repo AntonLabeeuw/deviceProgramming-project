@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project.Views.VotingPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout Background="White">
+            <!--<ScrollView>-->
+            <Image x:Name="imgRandomCat" Aspect="AspectFill" MinimumHeightRequest="100" />
+
+            <Label Text="Vind je deze foto leuk of niet?"></Label>
+            <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <ImageButton x:Name="btnUpvote" Clicked="btnUpvote_Clicked" Margin="50, 0, 0, 0" Padding="30" CornerRadius="200" Source="https://cdn.pixabay.com/photo/2013/07/12/19/20/arrow-154593_960_720.png" BackgroundColor="#ab965e"  HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="0" />
+                <ImageButton x:Name="btnDownvote" Clicked="btnDownvote_Clicked" Margin="0, 0, 50, 0"  CornerRadius="100" Padding="10" Source="https://icons-for-free.com/iconfiles/png/512/bxs+downvote-1325051958082370552.png" BackgroundColor="#ab965e" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="1" />
+            </Grid>
+
+            <Button x:Name="btnNextPicture" Clicked="btnNextPicture_Clicked" Text="Next" Margin="20"  Grid.Row="1" BackgroundColor="#ab965e" />
+
+            <!--</ScrollView>-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

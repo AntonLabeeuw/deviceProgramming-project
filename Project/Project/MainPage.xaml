@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project.MainPage"
+              NavigationPage.HasNavigationBar="False">
+
+    <StackLayout Background="#ab965e">
+        <Picker x:Name="pickEnergyLevel" SelectedIndexChanged="pickEnergyLevel_SelectedIndexChanged" Background="#ab965e" TextColor="White"></Picker>
+        
+        <ListView Margin="8" x:Name="lvwBreeds" RowHeight="100" ItemSelected="lvwBreeds_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame Margin="8">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <Label Text="{Binding Name}" TextColor="Black" />
+                                <Label Text="{Binding Origin}" HorizontalOptions="End" FontAttributes="Bold" TextColor="Black" />
+                                <Label Text="{Binding Temperament}" FontSize="Micro" Grid.Row="1" TextColor="Black" />
+                            </Grid>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Grid>
+            <Button x:Name="BtnRandomizer" Grid.Row="0" Text="randomizer" VerticalOptions="End" HorizontalOptions="Start" Margin="20,10" Clicked="BtnRandomizer_Clicked"  BackgroundColor="White" TextColor="Black"/>
+            <Button x:Name="btnQuoteOrFact" Clicked="btnQuoteOrFact_Clicked" Grid.Row="0" Text="Favourites" VerticalOptions="End" HorizontalOptions="End" Margin="20,10" BackgroundColor="White" TextColor="Black" />
+        </Grid>
+    </StackLayout>
+
+</ContentPage>

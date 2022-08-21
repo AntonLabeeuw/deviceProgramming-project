@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project.Views.FavouritesPage">
+    <ContentPage.Content>
+        <AbsoluteLayout Background="#ab965e">
+            <CarouselView
+            x:Name="lvwFavourites"
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            IndicatorView="indicatorview"
+            Margin="30">
+                <CarouselView.ItemTemplate>
+
+                    <DataTemplate>
+
+                        <Frame HasShadow="True" BorderColor="#14213D" CornerRadius="30" Margin="50" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                            <StackLayout>
+                                <Label Text="Favourite cats" FontSize="28" HorizontalOptions="Center" FontAttributes="Bold" TextColor="#14213D"></Label>
+                                <Image Source="{Binding Image.Url}" Margin="0,30,0,0" Aspect="AspectFill" HeightRequest="350" WidthRequest="300" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+            <IndicatorView
+            x:Name="indicatorview"
+            AbsoluteLayout.LayoutBounds="0.5,0.95,100,100"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            IndicatorColor="LightGray"
+            IndicatorSize="10"
+            SelectedIndicatorColor="#ab965e" />
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
